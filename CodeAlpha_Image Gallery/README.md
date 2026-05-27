@@ -4,10 +4,15 @@ An interactive and responsive image gallery built using HTML, CSS, and JavaScrip
 The gallery provides a clean and modern interface where users can browse, search, like, and download images easily.
 
 ✨ Features
+
 Responsive gallery layout 📱💻
+
 Image search functionality 🔍
+
 Like button feature ❤️
+
 Download image option ⬇️
+
 Smooth hover effects and animations ✨
 Clean and modern UI 🎨
 
@@ -17,9 +22,13 @@ CSS3
 JavaScript
 
 📂 Functionalities
+
 Browse images in grid layout,
+
 Search images instantly,
+
 Like favorite images,
+
 Download images directly.
 
 📌 Internship Task
