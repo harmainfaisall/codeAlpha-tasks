@@ -17,10 +17,10 @@ CSS3
 JavaScript
 
 📂 Functionalities
-Browse images in grid layout
-Search images instantly
-Like favorite images
-Download images directly
+Browse images in grid layout,
+Search images instantly,
+Like favorite images,
+Download images directly.
 
 📌 Internship Task
 
