@@ -26,13 +26,13 @@ JavaScript
 
 📂 Functionalities
 
-Browse images in grid layout,
+Browse images in grid layout
 
-Search images instantly,
+Search images instantly
 
-Like favorite images,
+Like favorite images
 
-Download images directly.
+Download images directly
 
 📌 Internship Task
 
