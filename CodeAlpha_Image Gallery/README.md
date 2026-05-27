@@ -17,8 +17,11 @@ Smooth hover effects and animations ✨
 Clean and modern UI 🎨
 
 🛠️ Technologies Used
+
 HTML5
+
 CSS3
+
 JavaScript
 
 📂 Functionalities
