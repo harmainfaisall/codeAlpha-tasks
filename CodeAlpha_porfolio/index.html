@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Harmain Faisal - Aspiring Web Developer Portfolio. Premium, aesthetic, and interactive personal website.">
+    <title>Harmain Faisal | Web Developer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="theme-dark-green">
+    <!-- Theme Toggle -->
+    <div id="theme-toggle" class="theme-toggle-orb" aria-label="Switch Theme">
+        <i class="fas fa-palette"></i>
+    </div>
+
+    <!-- Voice Navigation Setup -->
+    <div id="voice-nav-btn" class="voice-nav-btn" aria-label="Voice Navigation">
+        <i class="fas fa-microphone"></i>
+    </div>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar">
+        <div class="logo">Harmain Faisal</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section (Polished) -->
+        <section id="hero" class="hero-section">
+            <div id="particles-js"></div>
+            <div class="hero-content">
+                <h1 class="hero-name">Harmain Faisal</h1>
+                <p class="hero-tagline">Aspiring Web Developer | Turning Ideas into Interactive Experiences</p>
+                <div class="scroll-down">
+                    <a href="#about"><i class="fas fa-chevron-down"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm Harmain Faisal, a passionate web development student at SMIT, with foundational skills
+                            from Cisco Networking Academy. Transitioning from a pre-medical background, I'm dedicated to
+                            crafting beautiful, functional websites.</p>
+                       
+                        <div class="milestones-trigger">
+                            <button id="toggle-timeline-btn" class="btn-primary">View My Journey <i
+                                    class="fas fa-angle-down"></i></button>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="img-wrapper">
+                            <!-- Placeholder for profile pic -->
+                            <div class="placeholder-profile"><img width="300" src="./images/WhatsApp Image 2026-05-11 at 8.49.43 PM.jpeg"
+                                    alt="profile-picture"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Collapsible Timeline (Hidden by default) -->
+                <div id="milestone-timeline" class="timeline-hidden">
+                    <div class="timeline-item">
+                        <i class="fas fa-school"></i>
+                        <span>Matriculation (Pre-Medical) - Dar ul Madinah</span>
+                    </div>
+                    <div class="timeline-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Intermediate (Pre-Medical) - Gov. Islamia College</span>
+                    </div>
+                    <div class="timeline-item">
+                        <i class="fas fa-university "></i>
+                        <span>Saylani Mass IT Training (Web and App Development) </span>
+                    </div>
+                    <div class="timeline-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Cisco Networking Academy (HTML/CSS/JS)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+
+                <!-- Skill Matcher -->
+                <div class="skill-matcher">
+                    <input type="text" id="skill-input" placeholder="Type a skill (e.g., 'frontend')...">
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card" data-tags="frontend,web">
+                        <div class="skill-front">
+                            <i class="fab fa-html5"></i>
+                            <h3>HTML5</h3>
+                        </div>
+                        <div class="skill-back">
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 95%"></div>
+                            </div>
+                            <span class="percentage">95%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-tags="frontend,style,web">
+                        <div class="skill-front">
+                            <i class="fab fa-css3-alt"></i>
+                            <h3>CSS3</h3>
+                        </div>
+                        <div class="skill-back">
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 90%"></div>
+                            </div>
+                            <span class="percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-tags="frontend,logic,web">
+                        <div class="skill-front">
+                            <i class="fab fa-js"></i>
+                            <h3>JavaScript</h3>
+                        </div>
+                        <div class="skill-back">
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 80%"></div>
+                            </div>
+                            <span class="percentage">80%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-tags="framework,css,frontend">
+                        <div class="skill-front">
+                            <i class="fab fa-bootstrap"></i>
+                            <h3>Bootstrap</h3>
+                        </div>
+                        <div class="skill-back">
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 85%"></div>
+                            </div>
+                            <span class="percentage">85%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-tags="version control,tools">
+                        <div class="skill-front">
+                            <i class="fab fa-git-alt"></i>
+                            <h3>Git</h3>
+                        </div>
+                        <div class="skill-back">
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 75%"></div>
+                            </div>
+                            <span class="percentage">75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-tags="collaboration,tools">
+                        <div class="skill-front">
+                            <i class="fab fa-github"></i>
+                            <h3>GitHub</h3>
+                        </div>
+                        <div class="skill-back">
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 80%"></div>
+                            </div>
+                            <span class="percentage">80%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-tags="design,ui,ux">
+                        <div class="skill-front">
+                            <i class="fab fa-figma"></i>
+                            <h3>Figma</h3>
+                        </div>
+                        <div class="skill-back">
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 70%"></div>
+                            </div>
+                            <span class="percentage">70%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-tags="design,responsive,mobile">
+                        <div class="skill-front">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Responsive Design</h3>
+                        </div>
+                        <div class="skill-back">
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 90%"></div>
+                            </div>
+                            <span class="percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-tags="tools,editor">
+                        <div class="skill-front">
+                            <i class="fas fa-code"></i>
+                            <h3>VS Code</h3>
+                        </div>
+                        <div class="skill-back">
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 92%"></div>
+                            </div>
+                            <span class="percentage">92%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-tags="soft skills,logic">
+                        <div class="skill-front">
+                            <i class="fas fa-brain"></i>
+                            <h3>Problem Solving</h3>
+                        </div>
+                        <div class="skill-back">
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 88%"></div>
+                            </div>
+                            <span class="percentage">88%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+
+                <!-- Project Spotlight/Carousel Control -->
+                <div class="project-controls">
+                    <button id="random-project-btn" class="btn-secondary"><i class="fas fa-random"></i> Random
+                        Project</button>
+                </div>
+
+                <div class="projects-grid masonry-layout">
+                     <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="./images/delicious bites.png" alt="Practice Project" loading="lazy">
+                            <div class="card-overlay">
+                                <a href="https://delicious-bites-practiceweb.netlify.app/" target="_blank"
+                                    title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Delicious Bites</h3>
+                            <p>A sleek food ordering web app focused on intuitive UI, responsive design, and seamless user experience.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="./images/calculator.png" alt="Assignment 1" loading="lazy">
+                            <div class="card-overlay">
+                                <a href="https://modern-calculator-project.netlify.app/" target="_blank" title="Live Demo"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Calculator</h3>
+                            <p>Made with Html, Css and Javascript, Clean UI.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="./images/image gallery.png" alt="image gallery" loading="lazy">
+                            <div class="card-overlay">
+                                <a href="https://codealphaprojectimage.netlify.app/" target="_blank"
+                                    title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Image Gallery</h3>
+                            <p>Built with HTML, CSS, and JavaScript for a seamless viewing experience.</p>
+                        </div>
+                    </div>
+                    <!-- Bootstrap Practice -->
+                    <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="./images/Travelbae.jpg" alt="Bootstrap Practice" loading="lazy">
+                            <div class="card-overlay">
+                                <a href="travelbaeweb.netlify.app" target="_blank"
+                                    title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="disabled-link" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>TravelBae</h3>
+                            <p>A responsive site built with HTML and Bootstrap.</p>
+                        </div>
+                    </div>
+                    <!-- Practice Clone -->
+                    <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="./images/figma clone.png" alt="Figma Clone" loading="lazy">
+                            <div class="card-overlay">
+                                <a href="calm-dolphin-122a18.netlify.app" target="_blank" title="Live Demo"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Figma Clone</h3>
+                            <p>Cloning a figma design using HTML & CSS.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="./images/focusflow.png" alt="Practice Clone" loading="lazy">
+                            <div class="card-overlay">
+                                <a href="focusflowtimerr.netlify.app" target="_blank" title="Live Demo"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>FocusFlow - Study Timer</h3>
+                            <p>Build with Html, Css and Javascript. Specially design for students.</p>
+                        </div>
+                    </div>
+                     <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="./images/minihackathon project.png" alt="Figma Clone" loading="lazy">
+                            <div class="card-overlay">
+                                <a href="minihackathonproject.netlify.app" target="_blank" title="Live Demo"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Figma Clone</h3>
+                            <p>Cloning a figma design using HTML & CSS.</p>
+                        </div>
+                    </div>
+                     <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="./images/quiz app.png" alt="Quiz App" loading="lazy">
+                            <div class="card-overlay">
+                                <a href="https://syntecxhubquizappproject.netlify.app/" target="_blank"
+                                    title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Quiz App</h3>
+                            <p>A simple quiz application built with HTML, CSS, and JavaScript.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="./images/result checker.png" alt="Result Checker" loading="lazy">
+                            <div class="card-overlay">
+                                <a href="https://result-checker-app.netlify.app/" target="_blank"
+                                    title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Result Checker</h3>
+                            <p>A simple result checking application built with HTML, CSS, and JavaScript.</p>
+                        </div>
+                    </div>
+                     <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="./images/wordflowai.png" alt="WordFlow AI" loading="lazy">
+                            <div class="card-overlay">
+                                <a href="https://landingpagewordflowai.netlify.app/" target="_blank"
+                                    title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>WordFlow AI</h3>
+                            <p>A simple AI-powered writing assistant built with HTML, CSS, and JavaScript.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-timeline">
+                    <!-- Item 1 -->
+                    <div class="edu-item" data-aos="fade-up">
+                        <div class="edu-dot"></div>
+                        <div class="edu-content">
+                            <span class="edu-date">Present</span>
+                            <h3>Web Development Course</h3>
+                            <p>SMIT (Saylani Mass IT Training)</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="edu-item" data-aos="fade-up">
+                        <div class="edu-dot"></div>
+                        <div class="edu-content">
+                            <span class="edu-date">Certificate</span>
+                            <h3>Cisco Networking Academy</h3>
+                            <p>HTML, CSS, JavaScript</p>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <button class="view-cert-btn" data-cert="cisco">HTML</button>
+                                <button class="view-cert-btn" data-cert="css">CSS</button>
+                                <button class="view-cert-btn" data-cert="js">JavaScript</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="edu-item" data-aos="fade-up">
+                        <div class="edu-dot"></div>
+                        <div class="edu-content">
+                            <span class="edu-date">Intermediate</span>
+                            <h3>Government Islamia College</h3>
+                            <p>Pre-Medical</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="edu-item" data-aos="fade-up">
+                        <div class="edu-dot"></div>
+                        <div class="edu-content">
+                            <span class="edu-date">Matriculation</span>
+                            <h3>Dar ul Madinah Islamic School</h3>
+                            <p>Pre-Medical (Science)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-wrapper">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <a href="#" class="contact-link"><i class="fas fa-envelope"></i>
+                            <span>haruurabiya@gmail.com</span></a>
+                        <a href="#" target="_blank"
+                            class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#"
+                            class="contact-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Redesigned) -->
+    <footer class="footer-section">
+        <div class="container margin-bottom">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col">
+                    <h3 class="footer-logo">Harmain Faisal</h3>
+                    <p class="footer-desc">Crafting digital experiences with precision, passion, and a touch of
+                        elegance.</p>
+                </div>
+
+                <!-- Links Column -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Socials Column -->
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="footer-socials">
+                        <a href="#" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/harmainfaisall" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="margin: 0 auto;">&copy; 2025 Harmain Faisal. Built with <i class="fas fa-heart text-gold"></i> in
+                Karachi.</p>
+        </div>
+    </footer>
+
+    <!-- Chat Bubble -->
+    <div class="chat-bubble">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <!-- Universal Modal -->
+    <div id="universal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body-content">
+                <!-- Dynamic Content -->
+                <h2>Certificate View</h2>
+                <div class="cert-placeholder">
+                    <i class="fas fa-certificate"></i>
+                    <p>Certificate Image Placeholder</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

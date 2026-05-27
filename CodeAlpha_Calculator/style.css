@@ -1,0 +1,472 @@
+/* Palette Suggestion
+   Dark Mode (Default):
+   Bg: #1c1c1c (Dark Charcoal)
+   Buttons (Numbers): #3a3a3a (Dark Grey)
+   Buttons (Operators): #cd8032 (Muted Orange)
+   Buttons (Top Row): #666666 (Grey)
+   Buttons (Equals): Gradient Orange/Yellow
+*/
+
+:root {
+    /* DARK MODE (Default) */
+    --bg-app: #1c1c1c;
+    --bg-calculator: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+
+    /* Display */
+    --display-bg: transparent;
+
+    /* Buttons */
+    --btn-number-bg: #332f2c;
+    /* drak brown tint */
+    --btn-number-text: #ffffff;
+
+    --btn-secondary-bg: #5f5f5f;
+    /* Top row C, (), % */
+    --btn-secondary-text: #ffffff;
+
+    --btn-operator-bg: #ff9f0a;
+    /* Orange side column */
+    --btn-operator-text: #ffffff;
+
+    --btn-accent-bg: linear-gradient(135deg, #ff9f0a 0%, #ffcd3c 100%);
+    --btn-accent-text: #ffffff;
+
+    /* Toggle Switch */
+    --switch-bg: #5f5f5f;
+    --switch-circle: #ffffff;
+    --switch-icon-sun: #ffd700;
+    --switch-icon-moon: #f5f3ce;
+
+    --font-family: 'Outfit', sans-serif;
+    --radius-lg: 32px;
+    --radius-full: 50%;
+
+    /* Shadow */
+    --shadow-glass: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.light-theme {
+    /* LIGHT MODE */
+    --bg-app: #fdf6e3;
+    /* Creamy background */
+    --bg-calculator: #fff8f0;
+    --text-primary: #3e2723;
+    /* Dark Brown */
+    --text-secondary: #8d6e63;
+
+    /* Buttons */
+    --btn-number-bg: #ffebd2;
+    /* Light Beige/Peach */
+    --btn-number-text: #3e2723;
+
+    --btn-secondary-bg: #ffe0b2;
+    /* Top row lighter */
+    --btn-secondary-text: #3e2723;
+
+    --btn-operator-bg: #ffb74d;
+    /* Orange side column */
+    --btn-operator-text: #3e2723;
+
+    --btn-accent-bg: linear-gradient(135deg, #ffca28 0%, #ffca28 100%);
+    /* Yellowish */
+    --btn-accent-text: #3e2723;
+
+    /* Toggle Switch */
+    --switch-bg: #ffe0b2;
+    --switch-circle: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-app);
+    font-family: var(--font-family);
+    color: var(--text-primary);
+    height: 100vh;
+    /* Strict full height */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    /* Prevent body scroll completely */
+    margin: 0;
+}
+
+.calculator-container {
+    width: 100%;
+    /* Standard width for calculator */
+    width: clamp(300px, 90vw, 400px);
+    /* Safe height for laptops to avoid scrolling */
+    height: 85vh;
+    max-height: 800px;
+    min-height: 500px;
+
+    box-sizing: border-box;
+    background: var(--bg-calculator);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-glass);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header & Toggle */
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--switch-bg);
+    transition: .4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--switch-circle);
+    transition: .4s;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+}
+
+.toggle-icon {
+    font-size: 14px;
+    z-index: 1;
+}
+
+.sun-icon {
+    color: var(--switch-icon-sun);
+    margin-left: auto;
+}
+
+.moon-icon {
+    color: var(--switch-icon-moon);
+}
+
+#theme-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Display Section */
+.display {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Flexible height for display */
+    flex: 0 1 auto;
+    min-height: 80px;
+
+    word-wrap: break-word;
+    word-break: break-all;
+    position: relative;
+    padding: 0 4px;
+    margin-bottom: 4px;
+    flex-shrink: 0;
+}
+
+.previous-operand {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    min-height: 1.5rem;
+    margin-bottom: 4px;
+    font-weight: 300;
+}
+
+.current-operand {
+    color: var(--text-primary);
+    font-size: 5rem;
+    /* Normal large size */
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -2px;
+    transition: font-size 0.1s;
+}
+
+/* Dynamic scaling utilities */
+.text-medium {
+    font-size: 0.75em !important;
+}
+
+.text-small {
+    font-size: 0.5em !important;
+}
+
+/* ... memory indicator ... */
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 12px;
+
+    /* Crucial: Take remaining space and shrink if needed */
+    flex: 1 1 0;
+    min-height: 0;
+
+    width: 100%;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 16px;
+    /* Flexible height based on grid */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    color: var(--text-primary);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.95);
+    filter: brightness(0.9);
+}
+
+/* Button Variants */
+.btn-number {
+    background-color: var(--btn-number-bg);
+    color: var(--btn-number-text);
+}
+
+.btn-secondary {
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-secondary-text);
+}
+
+.btn-operator {
+    background-color: var(--btn-operator-bg);
+    color: var(--btn-operator-text);
+    font-size: 1.75rem;
+}
+
+.btn-operator.selected {
+    filter: brightness(1.2);
+    border: 2px solid var(--text-primary);
+}
+
+.btn-accent {
+    background: var(--btn-accent-bg);
+    color: var(--btn-accent-text);
+    font-weight: 600;
+}
+
+.btn-zero {
+    grid-column: span 2;
+    aspect-ratio: auto;
+    border-radius: 999px;
+    justify-content: flex-start;
+    padding-left: 28px;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+/* Mobile & Tablet: < 600px OR specific height constraints */
+@media (max-width: 600px) {
+    body {
+        /* On mobile, align bottom often feels better for one-handed use, 
+           or center if it's a small floating card? 
+           Native apps usually fill screen. */
+        align-items: stretch;
+        height: 100vh;
+        height: 100dvh;
+        /* Dynamic viewport height for mobile browsers */
+        overflow: hidden;
+    }
+
+    .calculator-container {
+        width: 100%;
+        max-width: none;
+        height: 100dvh;
+        max-height: none;
+        min-height: 0;
+
+        border-radius: 0;
+        padding: 16px;
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
+        padding-top: max(20px, env(safe-area-inset-top));
+
+        box-shadow: none;
+        gap: 10px;
+        justify-content: flex-end;
+    }
+
+    .display {
+        flex-grow: 1;
+        /* Display takes remaining space */
+        min-height: 0;
+        /* Allow shrinking if needed (landscape) */
+        justify-content: flex-end;
+        padding-right: 2px;
+        margin-bottom: 10px;
+    }
+
+    .current-operand {
+        font-size: 15vw;
+        /* Big text */
+        line-height: 1;
+    }
+
+    .buttons-grid {
+        /* On mobile, buttons should probably not force aspect-ratio 1 if height is constrained */
+        flex-grow: 0;
+        /* Don't expand buttons too much, let display grow */
+        height: auto;
+        /* Calculate height: 5 rows * roughly 70-80px? Or use percents? */
+        /* Let's make the grid take up about 60-65% of screen height naturally */
+        flex-basis: 60%;
+    }
+
+    button {
+        aspect-ratio: auto;
+        /* Remove fixed square */
+        border-radius: 50px;
+        /* More rounded on mobile often looks friendlier */
+        font-size: 1.7rem;
+    }
+
+    .btn-zero {
+        border-radius: 50px;
+    }
+}
+
+/* Landscape Mobile / Short Screens */
+@media (max-height: 600px) and (orientation: landscape) {
+    .calculator-container {
+        flex-direction: row;
+        /* Horizontal layout for landscape */
+        align-items: stretch;
+        gap: 20px;
+        padding: 16px;
+        padding-bottom: 16px;
+        padding-right: max(16px, env(safe-area-inset-right));
+        padding-left: max(16px, env(safe-area-inset-left));
+    }
+
+    .header-actions {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+        /* Make switch smaller/transparent or move it out of the way */
+    }
+
+    .theme-switch-wrapper {
+        transform: scale(0.8);
+        transform-origin: top left;
+    }
+
+    .display {
+        flex: 1;
+        align-items: flex-end;
+        justify-content: center;
+        padding-right: 16px;
+        margin-bottom: 0;
+        min-width: 30%;
+        /* Ensure display has some width */
+    }
+
+    .current-operand {
+        font-size: 15vh;
+        /* Scale with height in landscape */
+    }
+
+    .buttons-grid {
+        flex: 1.5;
+        /* Buttons take more width */
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 8px;
+        flex-basis: auto;
+    }
+
+    button {
+        border-radius: 12px;
+        /* Tighter radius for packed landscape */
+        font-size: 1.4rem;
+    }
+}
+
+/* Hover fixes for touch devices */
+@media (hover: none) {
+    button:hover {
+        transform: none;
+        filter: none;
+    }
+
+    button:active {
+        filter: brightness(0.8);
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prismatic | Visual Anthology</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <div class="header-content">
+                <h1>Prismatic</h1>
+                <p>An interactive, categorized visual anthology.</p>
+            </div>
+
+            <div class="search-container">
+                <i class="ri-search-line search-icon"></i>
+                <input type="text" id="search-input" class="search-input"
+                    placeholder="Search images by caption or category...">
+            </div>
+
+            <nav class="filters">
+                <button class="filter-btn active" data-filter="all">
+                    <span class="btn-text">All</span>
+                    <span class="btn-indicator"></span>
+                </button>
+                <button class="filter-btn" data-filter="nature">
+                    <span class="btn-text">Nature</span>
+                    <span class="btn-indicator"></span>
+                </button>
+                <button class="filter-btn" data-filter="animals">
+                    <span class="btn-text">Animals</span>
+                    <span class="btn-indicator"></span>
+                </button>
+                <button class="filter-btn" data-filter="architecture">
+                    <span class="btn-text">Architecture</span>
+                    <span class="btn-indicator"></span>
+                </button>
+                <button class="filter-btn" data-filter="food">
+                    <span class="btn-text">Food</span>
+                    <span class="btn-indicator"></span>
+                </button>
+                <button class="filter-btn" data-filter="drawing">
+                    <span class="btn-text">Drawing</span>
+                    <span class="btn-indicator"></span>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <div class="gallery" id="gallery">
+                <!-- Images will be dynamically injected here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-backdrop"></div>
+        <div class="lightbox-ui">
+            <button class="lightbox-close" id="close-btn" aria-label="Close Lightbox">
+                <i class="ri-close-line"></i>
+            </button>
+            <button class="lightbox-nav prev" id="prev-btn" aria-label="Previous Image">
+                <i class="ri-arrow-left-line"></i>
+            </button>
+            <button class="lightbox-nav next" id="next-btn" aria-label="Next Image">
+                <i class="ri-arrow-right-line"></i>
+            </button>
+
+            <div class="lightbox-image-container">
+                <img src="" alt="" class="lightbox-image" id="lightbox-image">
+                <div class="lightbox-loader"></div>
+            </div>
+
+            <div class="lightbox-info">
+                <p class="lightbox-caption" id="lightbox-caption"></p>
+                <span class="lightbox-counter" id="lightbox-counter"></span>
+
+                <div class="lightbox-actions">
+                    <button class="action-btn" id="lightbox-favorite-btn">
+                        <i class="ri-heart-3-line"></i>
+                    </button>
+
+                    <button class="action-btn" id="lightbox-download-btn">
+                        <i class="ri-download-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
