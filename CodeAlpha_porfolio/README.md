@@ -4,18 +4,29 @@ A modern and responsive personal portfolio website built using HTML, CSS, and Ja
 This portfolio showcases my skills, projects, education, and certificates in a clean and interactive design.
 
 ✨ Features
+
 Responsive design for all devices 📱💻
+
 Modern and interactive UI 🎨
+
 Smooth scrolling and hover effects ✨
+
 Projects showcase section 🚀
+
 Skills section 👩‍💻
+
 Education section 🎓
+
 Certificates section 📜
+
 Contact section 📩
 
 🛠️ Technologies Used
+
 > HTML5
+> 
 > CSS3
+> 
 > JavaScript
 
 📂 Sections Included
